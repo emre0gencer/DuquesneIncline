@@ -5,12 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gift Shop | Duquesne Incline</title>
   <link rel="stylesheet" href="../static/css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../static/js/main.js" defer></script>
 </head>
 <body>
 
-  <header>
-    <img src="../static/images/logo.png" alt="Duquesne Incline Logo">
-    <nav>
+  <header class="site-header">
+    <div class="branding">
+      <img src="../static/images/logo.png" alt="Duquesne Incline Logo" class="logo">
+      <div class="title-tagline">
+        <h1>Duquesne Incline</h1>
+        <p class="tagline">
+          Open 365 Days A Year!<br>
+          Voted one of the Top Ten Sites in the World<br>
+          for Viewing a Cityscape — <em>USA Today</em>
+        </p>
+      </div>
+    </div>
+  
+    <nav class="site-nav">
       <ul>
         <li><a href="/index.html">Home</a></li>
         <li><a href="/views/visit.html">Plan Your Visit</a></li>
@@ -22,9 +35,30 @@
   </header>
 
   <main>
-    <h1>Gift Shop Highlights</h1>
-
-    <div class="product">
-      <img src="../static/images/giftshop/mug.jpg" alt="Duquesne Incline Coffee Mug">
-      <h2>Incline Coffee Mug</h2>
-      <p>Enjoy your coffee with
+    <section class="info-box">
+      <div class="jquery-slideshow">
+        <div class="slide-gallery">
+          <img src="../static/images/gift1.jpg" alt="Incline Souvenir Mug">
+          <img src="../static/images/gift2.jpg" alt="Miniature Cable Car">
+          <img src="../static/images/gift3.jpg" alt="Incline Skyline Poster">
+          <img src="../static/images/gift4.jpg" alt="Incline Keychain">
+        </div>
+      
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      
+        <div class="dot-nav">
+          <span class="dot" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+          <span class="dot" data-slide="3"></span>
+        </div>
+      </div>
+      <p class="giftshop-msg">
+        Take home a piece of Pittsburgh! Our handpicked souvenirs capture the charm and history of the Duquesne Incline — perfect for remembering your ride or gifting someone special.
+      </p>
+    </section>
+    
+  <footer>
+    <p>&copy; 2025 Society for the Preservation of the Duquesne Heights Incline</p>
+  </footer>
