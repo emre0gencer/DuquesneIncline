@@ -1,0 +1,50 @@
+/* Reset + Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: #fff;
+    color: #333;
+  }
+  
+  header {
+    background-color: #8C1C13;
+    color: #fff;
+    padding: 1em;
+  }
+  
+  header img {
+    height: 60px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav a.active {
+    text-decoration: underline;
+  }
+  
+  main {
+    padding: 2em;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1em;
+    background: #eee;
+    font-size: 0.9em;
+  }
+  
