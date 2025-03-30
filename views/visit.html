@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Plan Your Visit | Duquesne Incline</title>
   <link rel="stylesheet" href="../static/css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../static/js/main.js" defer></script>
 </head>
 <body>
 
@@ -12,21 +14,22 @@
     <img src="../static/images/logo.png" alt="Duquesne Incline Logo">
     <nav>
       <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="history.html">History</a></li>
-        <li><a href="visit.html" class="active">Plan Your Visit</a></li>
-        <li><a href="giftshop.html">Gift Shop</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/views/visit.html">Plan Your Visit</a></li>
+        <li><a href="/views/giftshop.html">Gift Shop</a></li>
+        <li><a href="/views/history.html">History</a></li>
+        <li><a href="/views/contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Visitor Information</h1>
+    <h1>Plan Your Visit</h1>
+    <p>Get all the details you need before your ride on the historic Duquesne Incline.</p>
 
-    <section>
-      <h2>Hours of Operation</h2>
-      <table>
+    <section class="info-box">
+      <h2>⏰ Hours of Operation</h2>
+      <table class="styled-table">
         <thead>
           <tr>
             <th>Day</th>
@@ -35,33 +38,94 @@
         </thead>
         <tbody>
           <tr>
-            <td>Monday–Friday</td>
+            <td>Monday – Friday</td>
             <td>5:30 AM – 12:30 AM</td>
           </tr>
           <tr>
-            <td>Saturday–Sunday</td>
+            <td>Saturday – Sunday</td>
             <td>7:00 AM – 12:30 AM</td>
           </tr>
         </tbody>
       </table>
     </section>
-
-    <section>
-      <h2>Fares</h2>
-      <ul>
-        <li>Adults (12+): $2.50 one-way</li>
-        <li>Children (6–11): $1.25</li>
-        <li>Children under 5: Free</li>
-      </ul>
+    
+    <section class="info-box">
+      <h2>💵 Fares</h2>
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Visitor Category</th>
+            <th>Fare</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Adults (12+)</td>
+            <td>$2.50 one-way</td>
+          </tr>
+          <tr>
+            <td>Children (6–11)</td>
+            <td>$1.25 one-way</td>
+          </tr>
+          <tr>
+            <td>Children under 5</td>
+            <td>Free</td>
+          </tr>
+          <tr>
+            <td>Senior Citizens*</td>
+            <td>Free with valid PRT card</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="table-note">*A valid Pennsylvania Senior Transit ID, ConnectCard, or PRT card is required for free senior fare eligibility.</p>
+      <p class="table-note">Note: The Duquesne Incline accepts cash only. Change machines are available.</p>
     </section>
-
-    <section>
-      <h2>Location</h2>
-      <p>Address: 1197 W Carson St, Pittsburgh, PA 15219</p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d759.150054305656!2d-80.01845829576588!3d40.4398505233436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f6af23f522ab%3A0x8b99a45afa1c012e!2sThe%20Duquesne%20Incline!5e0!3m2!1sen!2sus!4v1743222839471!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    <section class="info-box">
+      <h2>📸 Visitor Photo Gallery</h2>
+      <div class="jquery-slideshow">
+        
+        <div class="slide-gallery">
+          <img src="../static/images/visitors1.jpg" alt="Visitors at upper station">
+          <img src="../static/images/visitors2.jpg" alt="Visitors at observation deck">
+          <img src="../static/images/visitors3.jpg" alt="Family on incline">
+          <img src="../static/images/visitors4.jpg" alt="Kids in the station museum">
+          <img src="../static/images/visitors5.jpg" alt="Tourists photographing Pittsburgh">
+        </div>
+    
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    
+        <div class="dot-nav">
+          <span class="dot" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+          <span class="dot" data-slide="3"></span>
+          <span class="dot" data-slide="4"></span>
+        </div>
+      </div>
     </section>
+    
 
+      <div class="info-box">
+        <h2>📍 Location</h2>
+        <p>1197 W Carson St, Pittsburgh, PA 15219</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d759.150054305656!2d-80.01845829576588!3d40.4398505233436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f6af23f522ab%3A0x8b99a45afa1c012e!2sThe%20Duquesne%20Incline!5e0!3m2!1sen!2sus!4v1743222839471!5m2!1sen!2sus"
+          width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"
+          aria-label="Google Map location of Duquesne Incline"></iframe>
+      </div>
+
+      <div class="info-box">
+        <h2>📞 Contact Us</h2>
+        <p>Email: <a href="mailto:info@duquesneincline.org">info@duquesneincline.org</a></p>
+        <p>Phone: <a href="tel:+14124310655">(412) 431-0655</a></p>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>Contact us: <a href="mailto:info@duquesneincline.org"> info@duquesneincline.org
+    <p>&copy; 2025 Society for the Preservation of the Duquesne Heights Incline</p>
+  </footer>
+
+</body>
+</html>

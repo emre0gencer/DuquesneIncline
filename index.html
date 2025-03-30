@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Duquesne Incline</title>
   <link rel="stylesheet" href="static/css/styles.css">
-  <script src="static/js/jquery.min.js" defer></script>
-  <script src="static/js/main.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../static/js/main.js" defer></script>
+
 </head>
 <body>
 
@@ -14,11 +15,11 @@
     <img src="static/images/logo.png" alt="Duquesne Incline Logo">
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="views/history.html">History</a></li>
-        <li><a href="views/visit.html">Plan Your Visit</a></li>
-        <li><a href="views/giftshop.html">Gift Shop</a></li>
-        <li><a href="views/contact.html">Contact</a></li>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/views/visit.html">Plan Your Visit</a></li>
+        <li><a href="/views/giftshop.html">Gift Shop</a></li>
+        <li><a href="/views/history.html">History</a></li>
+        <li><a href="/views/contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -27,13 +28,90 @@
     <section>
       <h1>Welcome to the Duquesne Incline</h1>
       <p>Discover Pittsburgh from a whole new perspective.</p>
-      <div id="gallery"></div>
+    </section>
+
+    <section class="info-box" id="weather-box">
+      <h2>🌦 Current Weather at the Incline</h2>
+      <p id="weather">Loading weather...</p>
+    </section>
+
+    <section class="video-collage">
+      <div class="video-intro">
+        <h2>Scenes from the Incline</h2>
+        <p>Experience what it's like to ride the historic Duquesne Incline and soak in Pittsburgh's iconic skyline.</p>
+      </div>
+      
+      <div class="collage-wrapper">
+        <div class="main-video">
+          <iframe src="https://www.youtube.com/embed/ve3KMUIlSGk?si=16tP1TGzyODF4ipO&amp;start=2"
+                  title="YouTube video player"
+                  allowfullscreen
+                  frameborder="0">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="side-collage">
+        <img src="static/images/gallery1.jpg" alt="Vintage Duquesne Incline">
+        <img src="static/images/gallery2.jpg" alt="View from top of incline">
+        <img src="static/images/gallery3.jpg" alt="Inside incline station">
+      </div>
     </section>
 
     <section>
-      <h2>Our Location</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d759.150054305656!2d-80.01845829576588!3d40.4398505233436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f6af23f522ab%3A0x8b99a45afa1c012e!2sThe%20Duquesne%20Incline!5e0!3m2!1sen!2sus!4v1743222839471!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p>Take a step back in time on a century-old cable car and see the best views of downtown Pittsburgh while riding one of the few remaining inclines in the country. Opened on May 20, 1877, the Duquesne Incline was rescued and restored by a group of local residents in 1963 and still delights residents and visitors with its original, elegant, wooden cable cars. Now you can visit the interior of the incline and watch the machinery while it operates. The Duquesne Incline's upper station houses a museum of Pittsburgh history, including photos and a storehouse of information on inclines from around the world. Unusual Pittsburgh souvenirs, maps and photos can be found at the gift shop.</p>
     </section>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+    
+      <div class="accordion">
+    
+        <div class="accordion-item">
+          <button class="accordion-toggle">Do I need tickets or can I pay in advance?</button>
+          <div class="accordion-content">
+            <p>Exact cash fare is required upon arrival. There are no tickets, advance payments, reservations, or card payments accepted.</p>
+          </div>
+        </div>
+    
+        <div class="accordion-item">
+          <button class="accordion-toggle">What type of payment is accepted?</button>
+          <div class="accordion-content">
+            <p>The Duquesne Incline follows the same <strong>cash-only</strong> fare system as Pittsburgh’s public transportation. A change machine is available, but having exact fare speeds up the process.</p>
+          </div>
+        </div>
+    
+        <div class="accordion-item">
+          <button class="accordion-toggle">Can seniors ride for free?</button>
+          <div class="accordion-content">
+            <p>Yes. Pennsylvania Seniors (65+) ride free with a BLUE or YELLOW PRT card or a Senior ConnectCard. Otherwise, standard adult fare applies. Proof of ID is required — no exceptions.</p>
+          </div>
+        </div>
+    
+        <div class="accordion-item">
+          <button class="accordion-toggle">Are there restrooms available?</button>
+          <div class="accordion-content">
+            <p>Sorry, there are no restrooms available. The Incline has operated like a trolley since 1877 and lacks these facilities.</p>
+          </div>
+        </div>
+    
+        <div class="accordion-item">
+          <button class="accordion-toggle">When are the busiest times?</button>
+          <div class="accordion-content">
+            <p>Saturdays and Sundays after noon are the busiest. Expect a wait time of about 10 minutes in each direction.</p>
+          </div>
+        </div>
+    
+        <div class="accordion-item">
+          <button class="accordion-toggle">Is the Incline wheelchair accessible?</button>
+          <div class="accordion-content">
+            <p>The upper station (1220 Grandview Ave) and the observation deck are wheelchair accessible. The historic Incline cars can accommodate wheelchairs up to 25 inches wide.</p>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+    
   </main>
 
   <footer>
