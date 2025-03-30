@@ -50,9 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function fetchWeather() {
     const apiKey = "59dec80a1edf1f0afc1ac2ea95fd6f1f";
     const city = "Pittsburgh";
-    const proxy = "https://cors-anywhere.herokuapp.com/";
-    const url = `${proxy}https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   
     $.get(url, function (data) {
       const temp = Math.round(data.main.temp);
