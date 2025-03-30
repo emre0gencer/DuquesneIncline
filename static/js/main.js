@@ -1,18 +1,15 @@
 $(document).ready(function () {
-  // FAQ Accordion
+
   $(".accordion-toggle").click(function () {
     const content = $(this).next(".accordion-content");
     $(".accordion-content").not(content).slideUp();
     content.slideToggle();
   });
 
-  // Init slideshow
   initSlideshow(".jquery-slideshow");
 
-  // Init weather
   fetchWeather();
 
-  // Mailing list form
   const form = $("#mailing-list-form");
   const message = $("#form-message");
 
@@ -46,7 +43,6 @@ $(document).ready(function () {
   }
 });
 
-// Slideshow logic
 function initSlideshow(containerSelector) {
   const container = $(containerSelector);
   const slides = container.find(".slide-gallery img");
@@ -80,7 +76,6 @@ function initSlideshow(containerSelector) {
   setInterval(nextSlide, 5000);
 }
 
-// Weather
 function fetchWeather() {
   const apiKey = "59dec80a1edf1f0afc1ac2ea95fd6f1f";
   const city = "Pittsburgh";
@@ -115,3 +110,11 @@ function getWeatherIcon(main) {
   };
   return icons[main] || "🌡️";
 }
+
+$(".site-nav a").each(function () {
+  const page = window.location.pathname.split("/").pop();
+  if ($(this).attr("href") === page) {
+    $(this).addClass("active");
+  }
+});
+
